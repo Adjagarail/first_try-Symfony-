@@ -1,0 +1,122 @@
+easy_admin:
+    site_name: 'Les Demats Days'
+    design:
+      brand_color: '#1576bb'
+      assets:
+        css:
+          - 'https://example.org/css/admin3.css'
+        js:
+          - 'https://example.org/js/admin3.js'
+    list:
+        max_results: 30
+    show:
+        max_results: 20
+    entities:
+        # List the entity class name you want to manage
+        Programme:
+            class: App\Entity\Programme
+            label: 'Programme'
+            list:
+              title: "Trouvez ici tous nos %%entity_label%%s"
+              max_results: 10
+              fields:
+                - { property: 'id' }
+                - { property: 'Titre' }
+                - { property: 'HeureDemarrage' }
+                - { property: 'HeureFin' }
+                - { property: 'AnimerPar' }
+                - { property: 'Salle' }
+                - { property: 'Explicatif' }
+            show:
+              fields:
+                - { property: 'id' }
+                - { property: 'Titre' }
+                - { property: 'HeureDemarrage' }
+                - { property: 'HeureFin' }
+                - { property: 'AnimerPar' }
+                - { property: 'Salle' }
+                - { property: 'Explicatif' }
+              #############################################################
+              #                                                           #
+              #############################################################
+        Intervenant:
+            class: App\Entity\Intervenant
+            label: 'Nos Intervenants'
+            list:
+              title: "Trouvez ici tous nos %%entity_label%%"
+              max_results: 10
+              fields:
+                - { property: 'id' }
+                - { property: 'NomComplet' }
+                - { property: 'Entreprise' }
+                - { property: 'Poste' }
+                - { property: 'Avatar', type: 'image', base_path: '%app.path.intervenant_images%' }
+            show:
+              fields:
+                - { property: 'id' }
+                - { property: 'NomComplet' }
+                - { property: 'Entreprise' }
+                - { property: 'Poste' }
+                - { property: 'Avatar', type: 'image', base_path: '%app.path.intervenant_images%' }
+            form:
+              fields:
+                - { property: 'NomComplet' }
+                - { property: 'Entreprise' }
+                - { property: 'Poste' }
+                - { property: 'ImageFile', type: 'file' }
+              #############################################################
+              #                                                           #
+              #############################################################
+        Sponsor:
+            class: App\Entity\Sponsor
+            label: 'Nos Sponsors'
+            list:
+              title: "Trouvez ici tous nos %%entity_label%%s"
+              max_results: 10
+              fields:
+                - { property: 'id' }
+                - { property: 'Sponsor' }
+                - { property: 'Logo', type: 'image', base_path: '%app.path.sponsor_images%' }
+            show:
+              fields:
+                - { property: 'id' }
+                - { property: 'Sponsor' }
+                - { property: 'Logo', type: 'image', base_path: '%app.path.sponsor_images%' }
+            form:
+              fields:
+                - { property: 'Sponsor' }
+                - { property: 'imageFile', type: 'file' }
+              #############################################################
+              #                                                           #
+              #############################################################
+        Apropos:
+            class: App\Entity\Apropos
+            label: ' A Propos de l évenement '
+            list:
+              title: "%%entity_label%%s"
+              max_results: 10
+              fields:
+                - { property: 'id' }
+                - { property: 'Ouverture' }
+                - { property: 'Fermeture' }
+                - { property: 'Adresse' }
+                - { property: 'APropos' }
+                - { property: 'Postere',type: 'image', base_path: '%app.path.postere_images%' }
+            show:
+              fields:
+                - { property: 'id' }
+                - { property: 'Ouverture' }
+                - { property: 'Fermeture' }
+                - { property: 'Adresse' }
+                - { property: 'APropos' }
+                - { property: 'Postere',type: 'image', base_path: '%app.path.postere_images%' }
+            form:
+              fields:
+                - { property: 'Ouverture' }
+                - { property: 'Fermeture' }
+                - { property: 'Adresse' }
+                - { property: 'APropos' }
+                - { property: 'imageFile', type: 'file' }
+              #############################################################
+              #                                                           #
+              #############################################################
