@@ -50,6 +50,11 @@ class Programme
      */
     private $Explicatif;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Jour;
+
     public function __construct()
     {
         $this->AnimerPar = new ArrayCollection();
@@ -148,5 +153,17 @@ class Programme
     public function __toString()
     {
         return $this->Titre;
+    }
+
+    public function getJour(): ?string
+    {
+        return $this->Jour;
+    }
+
+    public function setJour(string $Jour): self
+    {
+        $this->Jour = $Jour;
+
+        return $this;
     }
 }

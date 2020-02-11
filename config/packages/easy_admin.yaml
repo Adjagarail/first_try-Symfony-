@@ -22,6 +22,7 @@ easy_admin:
               fields:
                 - { property: 'id' }
                 - { property: 'Titre' }
+                - { property: 'Jour' }
                 - { property: 'HeureDemarrage' }
                 - { property: 'HeureFin' }
                 - { property: 'AnimerPar' }
@@ -31,6 +32,7 @@ easy_admin:
               fields:
                 - { property: 'id' }
                 - { property: 'Titre' }
+                - { property: 'Jour' }
                 - { property: 'HeureDemarrage' }
                 - { property: 'HeureFin' }
                 - { property: 'AnimerPar' }
